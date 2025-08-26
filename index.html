@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Pollution Awareness</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body, html {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+ 
+    .background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+ 
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 50, 0.5);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      z-index: 1;
+    }
+
+    .content h1 { font-size: 3rem; margin-bottom: 20px; }
+    .content p { font-size: 1.3rem; max-width: 600px; margin-bottom: 30px; }
+
+    .btn {
+      padding: 12px 25px;
+      background: #00c4ff;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+    .btn:hover { background: #0088aa; }
+
+   
+    #action {
+      position: relative;
+      background: #f5f9ff;
+      padding: 80px 20px;
+      text-align: center;
+      z-index: 1;
+    }
+    #action h2 { font-size: 2rem; margin-bottom: 20px; color: #003366; }
+    #action p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 20px; color: #333; }
+    #action ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: left;
+    }
+   
+.action-btn {
+  appearance: none;
+  border: 0;
+  background: linear-gradient(135deg, #00c4ff, #0077cc);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  box-shadow: 0 8px 20px rgba(0, 120, 204, .35);
+  transition: transform .15s ease, box-shadow .2s ease, opacity .2s;
+}
+.action-btn:hover { transform: translateY(-1px); box-shadow: 0 12px 28px rgba(0, 120, 204, .45); }
+.action-btn:active { transform: translateY(0); box-shadow: none; }
+.action-btn:focus-visible { outline: 3px solid rgba(0,196,255,.6); outline-offset: 2px; }
+
+.tip-actions { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+.action-btn svg { width: 1em; height: 1em; }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0077cc; /* ocean blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+.navbar ul li a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+  </style>
+</head>
+<body>
+   <nav class="navbar">
+  <div class="logo">🌊 Ocean Awareness</div>
+  <ul>
+     <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="https://videos.pexels.com/video-files/31582306/13460552_2560_1440_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1>Save Our Oceans</h1>
+    <p>Every year, millions of tons of plastic end up in the ocean, threatening marine life and ecosystems. 
+       Together, we can make a difference.</p>
+    <a href="#action" class="btn">Take Action</a>
+  </div>
+
+  <section id="action">
+    <h2>What You Can Do</h2>
+    <p>Small actions lead to big change! Here are some simple ways you can help reduce ocean pollution:</p>
+   <ul>
+  <li>
+    ♻️ Reduce single-use plastics — carry reusable bags, bottles, and straws.
+    <div class="tip-actions">
+      <a class="action-btn" target="_blank" rel="noopener noreferrer"
+         href="https://www.unep.org/news-and-stories/story/7-ways-you-can-counter-scourge-single-use-plastics">
+        Learn How
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </li>
+
+  <li>
+    🚮 Dispose of trash responsibly and join beach clean-ups.
+    <div class="tip-actions">
+      <a class="action-btn" target="_blank" rel="noopener noreferrer"
+         href="https://oceanconservancy.org/trash-free-seas/">
+        Join a Cleanup
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </li>
+
+  <li>
+    🐟 Choose sustainable seafood to protect marine life.
+    <div class="tip-actions">
+      <a class="action-btn" target="_blank" rel="noopener noreferrer"
+         href="https://www.msc.org/en-us/what-you-can-do/choose-sustainable-seafood">
+        Choose MSC Seafood
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </li>
+
+  <li>
+    💧 Save water — less wastewater means less ocean pollution.
+    <div class="tip-actions">
+      <a class="action-btn" target="_blank" rel="noopener noreferrer"
+         href="https://www.epa.gov/watersense/start-saving">
+        Save Water at Home
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </li>
+
+  <li>
+    📢 Spread awareness about the importance of protecting our oceans.
+    <div class="tip-actions">
+      <a class="action-btn" target="_blank" rel="noopener noreferrer"
+         href="https://theoceancleanup.com/">
+        Share & Support
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </li>
+</ul>
+
+  </section>
+</body>
+</html>

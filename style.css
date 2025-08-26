@@ -1,0 +1,262 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4faff;
+  color: #03396c;
+}
+
+nav {
+  background: #005b96;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffcc00;
+}
+
+
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+#contact {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #00c4ff, #0077cc);
+  color: #fff;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+#contact p {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border: 2px solid #00e0ff;
+  background: #f0fbff;
+}
+
+#contact button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #fff;
+  color: #0077cc;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact button:hover {
+  background: #00e0ff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #005b96;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #03396c;
+}
+
+#about {
+  padding: 80px 20px;
+  background: #f0fbff;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #0077cc;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.about-container img {
+  width: 180px;      
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+#activities {
+  padding: 80px 20px;
+  background: #eaf7ff;
+  text-align: center;
+}
+
+#activities h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #0077cc;
+}
+
+.activities-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.activities-container img {
+  width: 180px;    
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%; 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.activities-text {
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.activity-buttons {
+  margin-top: 20px;
+}
+
+.activity-buttons .btn {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 20px;
+  background: #0099cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.activity-buttons .btn:hover {
+  background: #0077aa;
+  transform: scale(1.05);
+}
